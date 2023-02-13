@@ -1,0 +1,33 @@
+header{
+    height: 650px;
+    background-image: url('./images/t5.jpg');
+    background-size:cover ;
+    background-attachment: fixed;
+    
+}
+nav{
+    display: inline-block;
+    
+}
+span{
+    color: rgb(19, 198, 221);
+    
+}
+
+div h2{
+    margin-top: 185px;
+   
+}
+
+ div button{
+    margin-top: 250px;
+    
+}
+.honey{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
