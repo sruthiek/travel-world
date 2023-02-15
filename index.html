@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>travel site</title>
 
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Caveat&family=Kenia&family=Libre+Baskerville:ital@1&family=Lilita+One&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- font awesome link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./travelsite.css">
     <!-- bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,11 +25,11 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
 
         <!-- navbar -->
 
-        <nav class="navbar navbar-expand-lg  fixed-top">
+        <nav class="navbar navbar-expand-lg  navbar-fixed-top navbar-light ">
             <div class="container">
                 <a class="navbar-brand  fs-1 fw-bold" href="#">Travel<span class="fs-5">guide</span></a>
 
@@ -31,38 +42,34 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active  fw-bold" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active ms-5   fw-bold" aria-current="page" href="#header">Home</a>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle  fw-bold " href="#" role="button"
+                        <div class=" dropdown">
+                            <a class="dropdown-item dropdown-toggle mt-2 ms-2 fw-bold " href="#"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Packages
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#secsection">honeymoon packages</a></li>
+                                <li><a class="dropdown-item" href="#top">top destinations</a></li>
+
+
                             </ul>
+                        </div>
+
+                        <li class="nav-item">
+                            <a class="nav-link active  fw-bold ms-2" aria-current="page" href="#services">services</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active  fw-bold " aria-current="page" href="#">transport</a>
+                            <a class="nav-link active  fw-bold ms-2" aria-current="page" href="#topvenues">Hotels</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link active  fw-bold " aria-current="page" href="#">Hotels</a>
-                        </li>
+
 
                         <li class="nav-item">
-                            <a class="nav-link active fw-bold " aria-current="page" href="#">Blogs</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active fw-bold " aria-current="page" href="#">Support</a>
+                            <a class="nav-link active fw-bold ms-2" aria-current="page" href="#contact">Contact</a>
                         </li>
 
 
@@ -100,10 +107,52 @@
 
             </div>
             <div class="col-6">
-                <button type="button" class="btn btn-primary">Enquiry</button>
+
+
+                <!-- modal for button -->
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Enquiry
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Fill the details</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <label for="name">name</label><br>
+                                <input type="text " placeholder="enter name" id="name"><br>
+                                <label for="pl">place</label><br>
+                                <input type="text " placeholder="enter place" id="pl"><br>
+
+                                <label for="ph">contact</label><br>
+                                <input type="text " placeholder="enter contact num" id="ph">
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
 
         </div>
+
+
 
 
 
@@ -113,51 +162,222 @@
     <!--second section  -->
 
 
-    <h3 class="text-center">HONEYMOON PACKAGES</h3><br>
-    <div class="row">
+    <h3 class="text-center fw-bold">HONEYMOON PACKAGES</h3><br>
+    <div class="row  " id="secsection">
 
-        <div class="col ms-5">
-            <div class="card text-center" style="width: 13rem; height:5rem">
-                <img src="./images/kerala.jpg" class="card-img-top img-fluid" alt="img">
+        <div class="col-sm-6 col-md-3 ">
+            <div class="card-1 text-center  h-100">
+                <img src="./images/balooon.jpg" class="card-img-top img-fluid" alt="img">
                 <div class="card-body">
                     <h5 class="card-title">Kerala honeymoon packages</h5>
-                    <p class="card-text">Almost nothing can override love between two people who decide to spend the
+                    <p class="card-text" style="text-align: justify;">Almost nothing can override love between two
+                        people who decide to spend the
                         rest of their lives with each other and our honeymoon packages cater to just that. It’s a
                         profoundly pure feeling that forms the very basis of mankind.</p>
-                    <a href="#" class="btn btn-primary ">book now</a>
+
+
+
+                    <!-- modal for button -->
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        BOOK NOW
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fill the details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <label for="name">name</label><br>
+                                    <input type="text " placeholder="enter name" id="name"><br>
+                                    <label for="pl">place</label><br>
+                                    <input type="text " placeholder="enter place" id="pl"><br>
+
+                                    <label for="ph">contact</label><br>
+                                    <input type="text " placeholder="enter contact num" id="ph">
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card text-center" style="width: 13rem; height:5rem">
-                <img src="./images/maldives.jpg" class="card-img-top  img-fluid" alt="img">
+        <div class="col-sm-6 col-md-3 ">
+            <div class="card-1 text-center h-100">
+                <img src="./images/walking.jpg" class="card-img-top  img-fluid" alt="img">
                 <div class="card-body">
                     <h5 class="card-title">Goa honeymoon package</h5>
-                    <p class="card-text">Goa is a state in western India with coastlines stretching along the Arabian Sea. Its long history as a Portuguese colony prior to 1961 is evident in its preserved 17th-century churches and the area’s tropical spice plantations. Goa is also known for its beaches.</p>
-                    <a href="#" class="btn btn-primary">book now</a>
+                    <p class="card-text" style="text-align: justify;">Goa is a state in western India with coastlines
+                        stretching along the Arabian
+                        Sea.Its long history as a Portuguese colony prior to 1961 is evident in its preserved
+                        17th-century churches and the area's tropical spice plantations. Goa is also known for its
+                        beaches.</p>
+
+
+
+                    <!-- modal for button -->
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        BOOK NOW
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fill the details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <label for="name">name</label><br>
+                                    <input type="text " placeholder="enter name" id="name"><br>
+                                    <label for="pl">place</label><br>
+                                    <input type="text " placeholder="enter place" id="pl"><br>
+
+                                    <label for="ph">contact</label><br>
+                                    <input type="text " placeholder="enter contact num" id="ph">
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card text-center" style="width: 13rem;height:5rem">
-                <img src="./images/goa.jpg" class="card-img-top  img-fluid" alt="img">
+        <div class="col-sm-6 col-md-3 ">
+            <div class="card-1 text-center h-100">
+                <img src="./images/train.jpg" class="card-img-top  img-fluid" alt="img">
                 <div class="card-body">
                     <h5 class="card-title">maldives honeymoon package</h5>
-                    <p class="card-text">Maldives,  is an archipelagic state in South Asia, situated in the Indian Ocean. It lies southwest of Sri Lanka and India, about 750 kilometres from the Asian continent's mainland.The Maldives is always named as hot spot destination in world.</p>
-                    <a href="#" class="btn btn-primary">book now</a>
+                    <p class="card-text" style="text-align: justify;">Maldives, is an archipelagic state in South Asia,
+                        situated in the Indian Ocean.
+                        It lies southwest of Sri Lanka and India, about 750 kilometres from the Asian continent's
+                        mainland.The Maldives is always named as hot Its long history as a Its long history as Its long
+                        a Portuguese colonyPortu in world.</p>
+
+
+
+                    <!-- modal for button -->
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        BOOK NOW
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fill the details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <label for="name">name</label><br>
+                                    <input type="text " placeholder="enter name" id="name"><br>
+                                    <label for="pl">place</label><br>
+                                    <input type="text " placeholder="enter place" id="pl"><br>
+
+                                    <label for="ph">contact</label><br>
+                                    <input type="text " placeholder="enter contact num" id="ph">
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card text-center" style="width: 13rem;height:5rem">
-                <img src="./images/manali.jpg" class="card-img-top  img-fluid" alt="img">
+        <div class="col-sm-6 col-md-3  ">
+            <div class="card-1 text-center h-100">
+                <img src="./images/sea.jpg" class="card-img-top  img-fluid" alt="img">
                 <div class="card-body">
                     <h5 class="card-title">Manali honeymoon package </h5>
-                    <p class="card-text">Manali is a town, near Kullu town in Kullu district in the Indian state of Himachal Pradesh.[2] It is situated in the northern end of the Kullu Valley, formed by the Beas River. </p>
-                    <a href="#" class="btn btn-primary">book now</a>
+                    <p class="card-text" style="text-align: justify;">Manali is a town, near Kullu town in Kullu
+                        district in the Indian state of
+                        Himachal Pradesh.Its long history as a Portuguese colony It is situated in the northern end of
+                        the Kullu Valley.With spectacular valleys, breathtaking views,mountains, lush forests of oal,
+                        fir, deodar and pine.
+                    </p>
+
+
+
+                    <!-- modal for button -->
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        BOOK NOW
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fill the details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <label for="name">name</label><br>
+                                    <input type="text " placeholder="enter name" id="name"><br>
+                                    <label for="pl">place</label><br>
+                                    <input type="text " placeholder="enter place" id="pl"><br>
+
+                                    <label for="ph">contact</label><br>
+                                    <input type="text " placeholder="enter contact num" id="ph">
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -165,10 +385,365 @@
 
     </div>
 
+    <!-- 3 section or 3 row -->
+    <hr>
+
+    <h3 class="text-center  fw-bold">TOP DESTINATIONS</h3><br><br>
+    <div class="row " id="top">
+
+        <div class="col-sm-6 col-md-3  col-lg-4 text-center">
+
+            <div class="card px-3 py-3 " style="width: 20rem;">
+                <img src="./images/thajmahal.jpg" class="card-img-top" alt="img">
+                <div class="card-body">
+                    <h5 class="card-title">AGRA</h5>
+                    <p class="card-text" style="text-align: justify;"> It is undeniably one of the most romantic
+                        getaways in India from Delhi and the cities of Uttar Pradesh. What better way to enjoy the
+                        honeymoon than sitting witnessing the most extravagant token of love up close!.</p>
+
+
+
+                    <!-- modal for button -->
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        BOOK NOW
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fill the details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <label for="name">name</label><br>
+                                    <input type="text " placeholder="enter name" id="name"><br>
+                                    <label for="pl">place</label><br>
+                                    <input type="text " placeholder="enter place" id="pl"><br>
+
+                                    <label for="ph">contact</label><br>
+                                    <input type="text " placeholder="enter contact num" id="ph">
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-sm-6 col-md-3  col-lg-4 text-center">
+
+            <div class="card px-3 py-3 " style="width: 20rem;">
+                <img src="./images/riverside.jpg" class="card-img-top" alt="img">
+                <div class="card-body">
+                    <h5 class="card-title">JAISALMER</h5>
+                    <p class="card-text" style="text-align: justify;"> Jaisalmer is the best place for honeymoon in
+                        India to get the feel of Arabian nights. A honeymoon at Jaisalmer is but a hearty affair! The
+                        vibrant culture and tradition of the ‘Golden City’ is capable of warming a cold heart. </p>
+
+
+
+                    <!-- modal for button -->
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        BOOK NOW
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fill the details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <label for="name">name</label><br>
+                                    <input type="text " placeholder="enter name" id="name"><br>
+                                    <label for="pl">place</label><br>
+                                    <input type="text " placeholder="enter place" id="pl"><br>
+
+                                    <label for="ph">contact</label><br>
+                                    <input type="text " placeholder="enter contact num" id="ph">
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3  col-lg-4  text-center">
+
+            <div class="card px-3 py-3 " style="width: 20rem;">
+                <img src="./images/kottaram.jpg" class="card-img-top" alt="img">
+                <div class="card-body">
+                    <h5 class="card-title">SIKKIM</h5>
+                    <p class="card-text" style="text-align: justify;"> View of the Himalayan Range, Lakes, Landscapes,
+                        Trekking, River Rafting, Tallest Statue, Buddhist Monasteries,People and
+                        culture,Shopping,Organic farming.The nearest airport is at Bagdogra . </p>
+
+
+
+                    <!-- modal for button -->
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        BOOK NOW
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fill the details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <label for="name">name</label><br>
+                                    <input type="text " placeholder="enter name" id="name"><br>
+                                    <label for="pl">place</label><br>
+                                    <input type="text " placeholder="enter place" id="pl"><br>
+
+                                    <label for="ph">contact</label><br>
+                                    <input type="text " placeholder="enter contact num" id="ph">
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
 
 
 
+
+        <!-- <div class="col-sm-6 col-md-3  col-lg-4 text-center">
+
+            <div class="card px-3 py-3 " style="width: 20rem;">
+                <img src="./images/kotta.jpg" class="card-img-top" alt="img">
+                <div class="card-body">
+                    <h5 class="card-title">KHAJJIAR</h5>
+                    <p class="card-text" style="text-align: justify;"> They don’t simply call Khajjiar the ‘Switzerland
+                        of India’. The vast expanse of green meadows and dense forests besides vistas of snow-clad
+                        Himalayan peaks resembles the most romantic destination in world. </p>
+                    <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+
+            </div>
+        </div> -->
+
+
+
+
+    </div>
+
+
+    <!-- 4th section :services-->
+    <div id="services" class="services">
+        <div class="container text-center">
+            <h3 class="text-center  fw-bold">OUR SERVICES</h3><br>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service item rounded pt-3">
+                        <i class="fa-solid  fa-4x fa-globe mb-4" ></i>
+                        <h5>world wide tours</h5>
+
+                    </div>
+
+                </div>
+
+                <!-- ----- -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service item rounded pt-3">
+                        <i class="fa-solid fa-4x  fa-hotel mb-4" ></i>
+                        <h5>hotel reservation</h5>
+
+                    </div>
+
+                </div>
+                <!-- ---- -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service item rounded pt-3">
+                        <i class="fa-solid  fa-4x fa-user mb-4" ></i>
+                        <h5>travel guide</h5>
+
+                    </div>
+
+                </div>
+
+                <!-- --- -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service item rounded pt-3">
+                        <i class="fa-solid fa-4x  fa-gear pt-3" ></i>
+                        <h5>event management</h5>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <hr>
+
+
+    <div id="topvenues">
+        <!-- hotels section -->
+        <h3 class="text-center">TOP VENUES</h3>
+        <!-- row1 -->
+        <div class="row ">
+            <div class="col-md-6  col-sm-6 col-lg-6">
+                <img src="./images/hotel1.jpg" alt="img" class="ms-5 mb-4" style="width: 400px;">
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-lg-6 ">
+                <h2 class=" text-sm-start mt-4 ms-3" style="text-align: center;">
+                    Arethusa al Tavolo
+                    Bantam, Contemporary <br>American
+                </h2><br>
+            </div>
+        </div>
+
+        <!-- row2 -->
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-lg-6">
+                <h2 class=" text-sm-start mt-4 ms-4" style="text-align: center;">
+                    Charleston
+                    Baltimore,<br> American
+                </h2>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-lg-6 ">
+
+                <img src="./images/hotel2.jpg" alt="img" class="ms-5 mb-4" style="width: 400px;">
+
+            </div>
+        </div>
+
+        <!-- row3 -->
+        <div class="row ">
+            <div class="col-md-6  col-sm-6 col-lg-6">
+                <img src="./images/hotel3.jpg" alt="img" class="ms-5 mb-4" style="width: 400px;">
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-lg-6 ">
+                <h2 class=" text-sm-start mt-4 ms-3" style="text-align: center;">
+                    Arethusa al Tavolo
+                    Bantam, Contemporary <br>American
+                </h2><br>
+            </div>
+        </div>
+
+        <!-- row4 -->
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-lg-6">
+                <h2 class=" text-sm-start mt-4 ms-4" style="text-align: center;">
+                    Charleston
+                    Baltimore,<br> American
+                </h2>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-lg-6 ">
+
+                <img src="./images/hotel4.jpg" alt="img" class="ms-5 mb-4" style="width: 400px;">
+
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    <!-- section for contact -->
+    <hr>
+    <section id="contact">
+
+        <div class="heading">
+            <h2 style="text-align: center;">Contact</h2>
+           
+        </div>
+
+        <!-- icons div -->
+        <div class="icondiv">
+            <div class="icon">
+                <a href="https://web.whatsapp.com/">
+                    <i class="fa-brands  fa-4x fa-whatsapp "></i>
+                </a>
+            </div>
+
+            <div class="icon">
+                <a href="https://web.whatsapp.com/">
+                    <i class="fa-brands  fa-4x fa-instagram "></i>
+                </a>
+            </div>
+
+            <div class="icon">
+                <a href="">
+                    <i class="fa-brands  fa-4x fa-facebook "></i>
+                </a>
+            </div>
+
+            <div class="icon">
+                <a href="https://www.linkedin.com/in/sruthi-e-k-78726a212">
+                    <i class="fa-brands  fa-4x fa-linkedin "></i>
+                </a>
+            </div>
+
+            <div class="icon">
+                <a href="https://github.com/sruthiek">
+                    <i class="fa-brands  fa-4x fa-github "></i>
+                </a>
+            </div>
+
+
+
+    </section>
+
+    <div class="arrowup">
+        <a href="#header"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
+    </div>
 
 </body>
 

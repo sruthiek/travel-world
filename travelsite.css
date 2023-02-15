@@ -5,11 +5,7 @@ header{
     background-attachment: fixed;
     
 }
-nav{
-    display: inline-block;
-   
-    
-}
+
 span{
     color: rgb(19, 198, 221);
     
@@ -21,15 +17,74 @@ div h2{
    
 }
 
- div button{
-    margin-top: 250px;
+  button{
+    margin-top: 100px;
     
 }
-.honey{
+.card-1:hover{
+    transform: scale(1.15);
+}
+.card-1{
+    transition: all 0.3s;
+}
+
+#examplemodal{
+    width: 500px;
+    height: 500px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+#services{
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+}
+#services :hover{
+    color: rgb(39, 151, 179);
+}
+#services *{
+    transition: 0.5s;
+}
+
+#contact{
+    margin-left: 8%;
+    margin-top: -10%;
+    margin-right: 8%;
+}
+.icondiv{
+    margin-top: 5%;
+    display: flex;
+align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+   
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    
+    justify-content: center;
+margin: 0 10px;
 }
 
+.icon i:hover{
+    background-image: linear-gradient(to right,rgb(97, 121, 214),rgb(221, 20, 20));
+    color: aqua;
+}
+
+.arrowup{
+    float: right;
+    margin: 1rem 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right,rgb(97, 121, 214),rgb(221, 20, 20));
+ }
+h2,h3{
+    font-family: 'Libre Baskerville', serif;
+}
